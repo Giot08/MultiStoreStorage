@@ -3,5 +3,4 @@
 </script>
 
 <template>
-  <p>index</p>
 </template>
