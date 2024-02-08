@@ -11,6 +11,7 @@ const vuetify = createVuetify({
     directives,
 })
 
+import 'boxicons'
 import './assets/main.css'
 
 import App from './App.vue'
