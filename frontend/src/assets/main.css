@@ -1,11 +1,23 @@
-
-
 .route-link {
   display: flex;
   justify-content: center;
   gap: 2px;
-  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 16px;
+}
+
+.secondary-routes {
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.secondary-routes__container {
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+.secondary-routes__container a *{
+  text-transform: uppercase;
+  text-decoration: none;
 }
