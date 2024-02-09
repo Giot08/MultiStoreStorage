@@ -1,17 +1,29 @@
 import { Sequelize } from 'sequelize';
 
-const db = new Sequelize('database', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'postgres'
-  });
-
-  try {
-    await db.authenticate();
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
+const db = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: 3306,
+    dialect: "mysql",
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: true,
+      },
+    },
+    define: {
+      timestamps: true,
+    },
+    pool: {
+      max: 10,
+      min: 0,
+      acquire: 15000,
+      idle: 10000,
+    },
+    operatorsAliases: false,
   }
+);
 
-  export {
-    db
-  }
+export default db;
