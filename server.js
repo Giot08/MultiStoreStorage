@@ -1,10 +1,11 @@
 import express from 'express';
 import 'dotenv/config'
 import cors from "cors"
-import routes from "./routes/routes.js"
+
+import { mainRoutes, storeRoutes } from './router/index.js'
 
 const server = express();
-const port = process.env.SERVICE_PORT || 3002;
+const port = process.env.SERVICE_PORT || 3000;
 
 // Cors
 const corsOptions = {
@@ -28,7 +29,7 @@ try {
 */
 
 //Routes
-server.use("/api", routes);
+server.use("/", mainRoutes,storeRoutes );
 
 server.listen(port, () => {
     console.log("Server live in: ", port);
