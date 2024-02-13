@@ -1,17 +1,18 @@
 import { Sequelize } from 'sequelize';
+
 const db = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
   process.env.DB_PASSWORD,
   {
-    host: "./tools/postgres:/var/lib/postgresql/data",
-    port: 3306,
-    dialect: "mysql",
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: true,
-      },
-    },
+    host: "localhost",
+    port: 5432,
+    dialect: "postgres",
+    // dialectOptions: {
+    //   ssl: {
+    //     rejectUnauthorized: false,
+    //   },
+    // },
     define: {
       timestamps: true,
     },
