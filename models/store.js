@@ -1,4 +1,5 @@
-import db from "../config/db.js"
+import db from "../db/db.js"
+import { DataTypes } from 'sequelize'
 
 const Store = db.define("store", {
     id: {

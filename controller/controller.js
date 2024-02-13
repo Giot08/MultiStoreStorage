@@ -3,6 +3,15 @@ import { check, validationResult } from "express-validator";
 //Models
 import Store from "../models/Store.model.js";
 // Store Controllers CRUD
+
+const storeMain = async (req, res) => {
+  try {
+    res.status(200).json({msg: "Store Controller up"});
+  } catch (error) {
+    res.status(500).json({error});    
+  }
+}
+
 const createStore = async (req, res) => {
   try {
     await check("name")
@@ -32,4 +41,5 @@ const createStore = async (req, res) => {
 };
 
 export {
+  storeMain
 };

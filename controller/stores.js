@@ -1,9 +1,18 @@
 //Dependencies
 import { check, validationResult } from "express-validator";
 //Models
-import Store from "../models/Store.model.js";
+import Store from '../models/store.js';
 // Store Controllers CRUD
-const createStore = async (req, res) => {
+
+export const storeMain = async (req, res) => {
+  try {
+    res.status(200).json({msg: "Store Controller up"});
+  } catch (error) {
+    res.status(500).json({error});    
+  }
+}
+
+export const createStore = async (req, res) => {
   try {
     await check("name")
       .notEmpty()
@@ -29,7 +38,4 @@ const createStore = async (req, res) => {
   } catch (error) {
     res.status(500).json(error);
   }
-};
-
-export {
 };
