@@ -1,41 +1,23 @@
 //Dependencies
-import { check, validationResult } from "express-validator";
+import { check, validationResult } from 'express-validator';
 //Models
 import Store from '../models/store.js';
+import { validateCreateStore } from './validations/storeValidatons.js';
 // Store Controllers CRUD
 
 export const storeMain = async (req, res) => {
   try {
-    res.status(200).json({msg: "Store Controller up"});
+    res.status(200).json({ msg: 'Store Controller up' });
   } catch (error) {
-    res.status(500).json({error});    
+    res.status(500).json({ error });
   }
-}
-
+};
 export const createStore = async (req, res) => {
   try {
-    await check("name")
-      .notEmpty()
-      .withMessage("Define el nombre de la tienda.")
-      .run(req);
-    let resultErrors = validationResult(req);
-    if (!resultErrors.isEmpty()) {
-      return res.status(400).json(resultErrors.array());
-    }
-
-    const { name } = req.body;
-
-    const isStoreDuplicated = await Store.findOne({
-      where: { name: name },
-    });
-    if (isStoreDuplicated) {
-      return res.status(400).json({
-        msg: `La tienda: ${name}, ya existe en la BD`,
-      });
-    }
-    const store = await Store.create(req.body);
-    res.status(200).json(store);
+    const isValidated = await validateCreateStore(req);
+    if(isValidated !== true) return res.status(400).json(isValidated);
+    res.status(200).json({ msg: 'Store Controller up' });
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ error });
   }
 };
