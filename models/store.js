@@ -14,6 +14,7 @@ const Store = db.define('store', {
   },
   address: {
     type: DataTypes.STRING,
+    primaryKey: true,
     allowNull: false,
   },
   city: {
