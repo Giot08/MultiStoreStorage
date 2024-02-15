@@ -4,5 +4,5 @@
 
 <template>
   <MainNav/>
-  SSTORAGE
+  STORAGE
 </template>

@@ -15,19 +15,23 @@ export const createStore = async (req, res) => {
   try {
     const isValidated = await validateCreateStore(req);
     if (isValidated !== true) return res.status(400).json(isValidated);
-
     const { address } = req.body;
-
     const isStoreDuplicated = await Store.findOne({
       where: { address }
     });
-
     if(isStoreDuplicated) return res.status(400).json({error: "You have already a store in that location"});
     const storeParse = StoreClass(req.body);
     const store = await Store.create(storeParse);
-    const request = req.body
-    
-    res.status(200).json({ msg: 'Store added succesfully', store, request});
+    res.status(200).json({ msg: 'Store added succesfully', store});
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+};
+
+export const getStores = async (req, res) => {
+  try {
+    const stores = await Store.findAll();
+    res.status(200).json(stores);
   } catch (error) {
     res.status(500).json({ error });
   }

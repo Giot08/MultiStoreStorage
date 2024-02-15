@@ -15,7 +15,7 @@ class Store {
     province,
     province_code,
     shop_owner,
-    zip,
+    zip
   ) {
     this.active = Boolean(active);
     this.address = address;
@@ -96,5 +96,5 @@ export const StoreClass = (data) => {
     zip,
   );
 
-  return store
+  return store;
 };
