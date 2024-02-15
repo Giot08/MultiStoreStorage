@@ -2,6 +2,8 @@
 import MainNav from '@/components/MainNav.vue';
 import { useStoreStorage } from '../stores/store.js'
 
+const tableHeaders = ["Name", "Location", "Address", "Store email", "Phone"];
+
 const useStore = useStoreStorage();
 useStore.getStores();
 </script>
@@ -12,20 +14,8 @@ useStore.getStores();
     <v-table fixed-header class="bg-primary">
       <thead>
         <tr>
-          <th class="text-left bg-primary">
-            Name
-          </th>
-          <th class="text-left bg-primary">
-            Location
-          </th>
-          <th class="text-left bg-primary">
-            Address
-          </th>
-          <th class="text-left bg-primary">
-            Store Email
-          </th>
-          <th class="text-left bg-primary">
-            phone
+          <th class="text-left bg-primary" v-for="(header, index) in tableHeaders" :key="index">
+            {{header}}
           </th>
         </tr>
       </thead>
@@ -35,7 +25,7 @@ useStore.getStores();
         </h1>
       </tbody>
       <tbody v-if="!useStore.isLoadingStores">
-        <tr v-for="store in useStore.stores" :key="store.name">
+        <tr v-for="store in useStore.stores" :key="store.id">
           <td>{{ store.name }}</td>
           <td>
             {{ store.country_code }} / 
@@ -47,10 +37,10 @@ useStore.getStores();
           <td>{{ store.main_email }}</td>
           <td>{{ store.phone }}</td>
           <td>
-            <v-btn variant="text">
+            <v-btn variant="text" :data-id="store.id">
               <box-icon color="rgb(3,169,244)" type='solid' name='edit'></box-icon>
             </v-btn>
-            <v-btn variant="text">
+            <v-btn variant="text" :data-id="store.id">
               <box-icon color="rgb(244,67,54)" type='solid' name='trash-alt'></box-icon>
             </v-btn>
           </td>
