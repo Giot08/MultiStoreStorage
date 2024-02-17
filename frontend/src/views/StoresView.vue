@@ -1,6 +1,15 @@
 <script setup>
+
+import {ref} from 'vue'
 import MainNav from '@/components/MainNav.vue';
+import NewStoreModal from '@/components/NewStoreModal.vue';
 import { useStoreStorage } from '../stores/store.js'
+
+
+
+const data = ref({
+  isModal: false
+})
 
 const tableHeaders = ["Name", "Location", "Address", "Store email", "Phone"];
 
@@ -19,10 +28,25 @@ useStore.getStores();
           </th>
         </tr>
       </thead>
-      <tbody v-if="useStore.isLoadingStores">
-        <h1>
-          is loading..
-        </h1>
+      <tbody v-if="useStore.isLoadingStores" >
+        <tr>
+          <td>
+            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
+          </td>
+          <td>
+            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
+          </td>
+          <td>
+            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
+          </td>
+          <td>
+            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
+          </td>
+          <td>
+            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
+          </td>
+        </tr>
+
       </tbody>
       <tbody v-if="!useStore.isLoadingStores">
         <tr v-for="store in useStore.stores" :key="store.id">
@@ -47,10 +71,6 @@ useStore.getStores();
         </tr>
       </tbody>
     </v-table>
-    <v-col cols="auto">
-      <v-btn class="bg-green text-white">
-        new store
-      </v-btn>
-    </v-col>
+    <NewStoreModal/>
   </v-container>
 </template>

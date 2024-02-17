@@ -39,7 +39,7 @@ const Store = db.define('store', {
   },
   domain: {
     type: DataTypes.STRING(100),
-    allowNull: false,
+    allowNull: true,
   },
   main_email: {
     type: DataTypes.STRING(100),
@@ -59,7 +59,7 @@ const Store = db.define('store', {
   },
   phone: {
     type: DataTypes.INTEGER(),
-    allowNull: true,
+    allowNull: false,
   },
   province: {
     type: DataTypes.STRING(100),
@@ -75,7 +75,7 @@ const Store = db.define('store', {
   },
   zip: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   }
 });
 
