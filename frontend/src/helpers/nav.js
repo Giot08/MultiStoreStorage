@@ -1,4 +1,4 @@
-const mainRoutes = [
+export const mainRoutes = [
   {
     route: '/',
     name: 'dashboard',
@@ -31,7 +31,7 @@ const mainRoutes = [
   }
 ]
 
-const indexRoutes = [
+export const indexRoutes = [
   {
     route: '/stores',
     name: 'stores'
@@ -53,5 +53,3 @@ const indexRoutes = [
     name: 'settings'
   }
 ]
-
-export { mainRoutes, indexRoutes }
