@@ -1,4 +1,4 @@
-import db from '../controller/db.js';
+import db from '../controller/dbController.js';
 import { DataTypes } from 'sequelize';
 
 const Store = db.define('store', {
@@ -29,11 +29,7 @@ const Store = db.define('store', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  owner_email: {
-    type: DataTypes.STRING(100),
-    allowNull: false,
-  },
-  currency: {
+  manager_email: {
     type: DataTypes.STRING(100),
     allowNull: false,
   },
@@ -41,7 +37,7 @@ const Store = db.define('store', {
     type: DataTypes.STRING(100),
     allowNull: true,
   },
-  main_email: {
+  store_email: {
     type: DataTypes.STRING(100),
     allowNull: false,
   },
@@ -58,7 +54,7 @@ const Store = db.define('store', {
     allowNull: false,
   },
   phone: {
-    type: DataTypes.INTEGER(),
+    type: DataTypes.STRING(20),
     allowNull: false,
   },
   province: {
@@ -67,10 +63,6 @@ const Store = db.define('store', {
   },
   province_code: {
     type: DataTypes.STRING,
-    allowNull: false,
-  },
-  shop_owner: {
-    type: DataTypes.STRING(100),
     allowNull: false,
   },
   zip: {

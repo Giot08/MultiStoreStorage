@@ -1,6 +1,6 @@
 import express from "express";
 
-import { createStore, getStores, storeMain } from '../../controller/stores.js'
+import { createStore, getStores, storeMain } from '../../controller/storesController.js'
 
 const storeRoutes = express.Router();
 

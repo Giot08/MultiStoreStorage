@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config'
 import cors from "cors"
-import db from './controller/db.js'
+import db from './controller/dbController.js'
 
 import { mainRoutes, storeRoutes } from './router/index.js'
 

@@ -1,15 +1,7 @@
 <script setup>
-
-import {ref} from 'vue'
 import MainNav from '@/components/MainNav.vue';
 import NewStoreModal from '@/components/NewStoreModal.vue';
-import { useStoreStorage } from '../stores/store.js'
-
-
-
-const data = ref({
-  isModal: false
-})
+import { useStoreStorage } from '../stores/storeStore.js'
 
 const tableHeaders = ["Name", "Location", "Address", "Store email", "Phone"];
 
@@ -58,7 +50,7 @@ useStore.getStores();
             {{ store.city }}
           </td>
           <td>{{ store.address }}</td>
-          <td>{{ store.main_email }}</td>
+          <td>{{ store.store_email }}</td>
           <td>{{ store.phone }}</td>
           <td>
             <v-btn variant="text" :data-id="store.id">

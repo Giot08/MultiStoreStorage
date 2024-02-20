@@ -1,12 +1,12 @@
 <script setup>
-import { createStore } from '@/api/storeApi.js'
 import { ref } from 'vue'
+import { createStore } from '@/api/storeApi.js'
 import countryList from '@/api/countries.json';
 import provinceList from '@/api/provinces.json';
 
 const data = ref({
     modal: false,
-    store: '',
+    name: '',
     state: null,
     phone: null,
     country: '',
@@ -15,7 +15,8 @@ const data = ref({
     provinces: [],
     city: '',
     address: '',
-    shop_email: '',
+    domain: '',
+    store_email: '',
     manager_email: '',
     latitude: null,
     longitude: null,
@@ -33,8 +34,6 @@ const handleProvice = () => {
     data.value.province = ''
     data.value.provinces = provinceList.filter(x => x.country === data.value.country).map(x => x.name);
 }
-
-// const test = () => {console.log(data.value.country)};
 </script>
 
 <template>
@@ -55,7 +54,7 @@ const handleProvice = () => {
                         <v-row>
                             <v-col cols="12" sm="6" md="4">
                                 <v-text-field label="Name*" :rules="[data.rules.required]"
-                                    v-model="data.store"></v-text-field>
+                                    v-model="data.name"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
                                 <v-select v-model="data.state" :rules="[data.rules.required]"
@@ -71,18 +70,22 @@ const handleProvice = () => {
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
                                 <v-select v-model="data.province" :rules="[data.rules.required]" :items="data.provinces"
-                                    label="Provinces*" required @update:modelValue=""></v-select>
+                                    label="Provinces*" required></v-select>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
                                 <v-text-field :rules="[data.rules.required]" label="City*" v-model="data.city" hint=""
                                     required></v-text-field>
                             </v-col>
-                            <v-col cols="12">
+                            <v-col cols="12" md="8">
                                 <v-text-field :rules="[data.rules.required]" v-model="data.address" label="Address*"
                                     required></v-text-field>
                             </v-col>
+                            <v-col cols="12" md="4">
+                                <v-text-field :rules="[data.rules.required]" v-model="data.domain"
+                                    label="Url"></v-text-field>
+                            </v-col>
                             <v-col cols="12" sm="6">
-                                <v-text-field v-model="data.shop_email" :rules="[data.rules.required, data.rules.email]"
+                                <v-text-field v-model="data.store_email" :rules="[data.rules.required, data.rules.email]"
                                     type="email" label="Shop Email*" required></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6">
@@ -113,4 +116,4 @@ const handleProvice = () => {
             </v-card>
         </v-dialog>
     </v-row>
-</template>@/api/storeApi.js
+</template>

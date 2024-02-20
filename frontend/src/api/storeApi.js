@@ -1,76 +1,85 @@
 import axios from 'axios'
+import countryList from './countries.json'
+import provinceList from './provinces.json'
+
+import { useStoreStorage } from '../stores/storeStore.js';
+const useStore = useStoreStorage();
 
 const api = {
  url: 'http://localhost:3000',
- create: '/store/create'
+ get_stores: '/store/show_all',
+ create: '/store/create',
+ head: {
+  headers: {
+   'Content-Type': 'application/x-www-form-urlencoded'
+  }
+ }
 }
-export const createStore = async (body) => {
- const {
-  store,
-  state,
-  phone,
-  country,
-  province,
-  city,
-  address,
-  shop_email,
-  manager_email,
-  latitude,
-  longitude,
-  zip_code
- } = body
 
- if (store === '') {
-  return alert('Enter a store name')
+export const loadStores = async (instance) => {
+ instance.isLoadingStores = true
+ try {
+  const res = await axios.get(`${api.url}${api.get_stores}`)
+  instance.stores = await res.data
+  instance.isLoadingStores = false
+ } catch (error) {
+  console.log('Not stores available', error)
+  instance.isLoadingStores = false
  }
- if (state === null) {
-  return alert('Enter the state of this store')
- }
- if (phone === null) {
-  return alert('Enter the phone of this store')
- }
- if (country === null) {
-  return alert('Enter the country of this store')
- }
- if (province === null) {
-  return alert('Enter the province of this store')
- }
- if (city === null) {
-  return alert('Enter the city of this store')
- }
- if (address === null) {
-  return alert('Enter the address of this store')
- }
- if (shop_email === null) {
-  return alert('Enter the shop email of this store')
- }
- if (manager_email === null) {
-  return alert('Enter the manager email of this store')
- }
+}
 
- console.log(`${api.url}${api.create}`)
-
- const { data } = await axios.post(
-  `${api.url}${api.create}`,
-  {
-   store,
+export const createStore = async (arr) => {
+ try {
+  const {
    state,
-   phone,
-   country,
-   province,
-   city,
    address,
-   shop_email,
+   city,
+   country,
    manager_email,
+   domain,
+   store_email,
    latitude,
    longitude,
+   name,
+   province,
+   phone,
    zip_code
-  },
-  {
-   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-   }
+  } = arr
+  if (name === '') alert('Enter a store name')
+  if (state === null) alert('Enter the state of this store')
+  if (phone === null) alert('Enter the phone of this store')
+  if (country === null) alert('Enter the country of this store')
+  if (province === null) alert('Enter the province of this store')
+  if (city === null) alert('Enter the city of this store')
+  if (address === null) alert('Enter the address of this store')
+  if (store_email === null) alert('Enter the shop email of this store')
+  if (manager_email === null) alert('Enter the manager email of this store')
+  const countryCode = () => {
+   return countryList.filter((x) => x.name === country)[0].code
   }
- )
- console.log(data);
+  const provinceCode = () => {
+   return provinceList.filter((x) => x.name === province)[0].code
+  }
+  const body = {
+   active: state === 'Active' ? true : false,
+   address,
+   city,
+   country,
+   country_code: countryCode(),
+   manager_email,
+   domain: domain || '',
+   store_email,
+   latitude: Number(latitude) || undefined,
+   longitude: Number(longitude) || undefined,
+   name,
+   phone,
+   province,
+   province_code: provinceCode(),
+   zip: zip_code || undefined
+  }
+  await axios.post(`${api.url}${api.create}`, body, api.head);
+  await loadStores(useStore);
+ } catch (error) {
+  console.error(error)
+ }
 }
