@@ -21,8 +21,8 @@ export const createStore = async (req, res) => {
     });
     if(isStoreDuplicated) return res.status(400).json({error: "You have already a store in that location"});
     const storeParse = StoreClass(req.body);
-    const store = await Store.create(storeParse);
-    res.status(200).json({ msg: 'Store added succesfully', store});
+    // const store = await Store.create(storeParse);
+    res.status(200).json({ storeParse });
   } catch (error) {
     res.status(500).json({ error });
   }

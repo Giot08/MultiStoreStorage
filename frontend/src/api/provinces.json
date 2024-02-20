@@ -1,0 +1,936 @@
+[
+    {
+		"country": "Canada",
+        "name": "Alberta",
+		"code": "AB",
+		"subdivision": "province",
+		"native": "Alberta"
+	},
+	{
+		"country": "Canada",
+        "name": "British Columbia",
+		"code": "BC",
+		"subdivision": "province",
+		"native": "Colombie-Britannique"
+	},
+	{
+		"country": "Canada",
+        "name": "Manitoba",
+		"code": "MB",
+		"subdivision": "province",
+		"native": "Manitoba"
+	},
+	{
+		"country": "Canada",
+        "name": "New Brunswick",
+		"code": "NB",
+		"subdivision": "province",
+		"native": "Nouveau-Brunswick"
+	},
+	{
+		"country": "Canada",
+        "name": "Newfoundland and Labrador",
+		"code": "NL",
+		"subdivision": "province",
+		"native": "Terre-Neuve-et-Labrador"
+	},
+	{
+		"country": "Canada",
+        "name": "Nova Scotia",
+		"code": "NS",
+		"subdivision": "province",
+		"native": "Nouvelle-Écosse"
+	},
+	{
+		"country": "Canada",
+        "name": "Ontario",
+		"code": "ON",
+		"subdivision": "province",
+		"native": "Ontario"
+	},
+	{
+		"country": "Canada",
+        "name": "Prince Edward Island",
+		"code": "PE",
+		"subdivision": "province",
+		"native": "Île-du-Prince-Édouard"
+	},
+	{
+		"country": "Canada",
+        "name": "Quebec",
+		"code": "QC",
+		"subdivision": "province",
+		"native": "Québec"
+	},
+	{
+		"country": "Canada",
+        "name": "Saskatchewan",
+		"code": "SK",
+		"subdivision": "province",
+		"native": "Saskatchewan"
+	},
+	{
+		"country": "Canada",
+        "name": "Northwest Territories",
+		"code": "NT",
+		"subdivision": "territory",
+		"native": "Territoires du Nord-Ouest"
+	},
+	{
+		"country": "Canada",
+        "name": "Nunavut",
+		"code": "NU",
+		"subdivision": "territory",
+		"native": "Nunavut"
+	},
+	{
+		"country": "Canada",
+        "name": "Yukon",
+		"code": "YT",
+		"subdivision": "territory",
+		"native": "Yukon"
+	},
+	{
+		"country": "Chile",
+        "name": "Aisén",
+		"code": "AI"
+	},
+	{
+		"country": "Chile",
+        "name": "Antofagasta",
+		"code": "AN"
+	},
+	{
+		"country": "Chile",
+        "name": "Araucanía",
+		"code": "AR"
+	},
+	{
+		"country": "Chile",
+        "name": "Arica y Parinacota",
+		"code": "AP"
+	},
+	{
+		"country": "Chile",
+        "name": "Atacama",
+		"code": "AT"
+	},
+	{
+		"country": "Chile",
+        "name": "Bío-Bío",
+		"code": "BI"
+	},
+	{
+		"country": "Chile",
+        "name": "Coquimbo",
+		"code": "CO"
+	},
+	{
+		"country": "Chile",
+        "name": "Libertador General Bernardo O'Higgins",
+		"code": "LI"
+	},
+	{
+		"country": "Chile",
+        "name": "Los Lagos",
+		"code": "LL"
+	},
+	{
+		"country": "Chile",
+        "name": "Los Ríos",
+		"code": "LR"
+	},
+	{
+		"country": "Chile",
+        "name": "Magallanes",
+		"code": "MA"
+	},
+	{
+		"country": "Chile",
+        "name": "Maule",
+		"code": "ML"
+	},
+	{
+		"country": "Chile",
+        "name": "Región Metropolitana de Santiago",
+		"code": "RM"
+	},
+	{
+		"country": "Chile",
+        "name": "Tarapacá",
+		"code": "TA"
+	},
+	{
+		"country": "Chile",
+        "name": "Valparaíso",
+		"code": "VS"
+	},
+    {
+        "country": "France",
+		"name": "Alsace",
+		"code": "A",
+		"subdivision": "Metropolitan region",
+		"native": "Alsace"
+	},
+	{
+        "country": "France",
+		"name": "Aquitaine",
+		"code": "B",
+		"subdivision": "Metropolitan region",
+		"native": "Aquitaine"
+	},
+	{
+        "country": "France",
+		"name": "Auvergne",
+		"code": "C",
+		"subdivision": "Metropolitan region",
+		"native": "Auvergne"
+	},
+	{
+        "country": "France",
+		"name": "Brittany",
+		"code": "E",
+		"subdivision": "Metropolitan region",
+		"native": "Bretagne"
+	},
+	{
+        "country": "France",
+		"name": "Burgundy",
+		"code": "D",
+		"subdivision": "Metropolitan region",
+		"native": "Bourgogne"
+	},
+	{
+        "country": "France",
+		"name": "Centre-Val de Loire",
+		"code": "F",
+		"subdivision": "Metropolitan region",
+		"native": "Centre"
+	},
+	{
+        "country": "France",
+		"name": "Champagne-Ardenne",
+		"code": "G",
+		"subdivision": "Metropolitan region",
+		"native": "Champagne-Ardenne"
+	},
+	{
+        "country": "France",
+		"name": "Corsica",
+		"code": "H",
+		"subdivision": "Metropolitan region",
+		"native": "Corse"
+	},
+	{
+        "country": "France",
+		"name": "Franche-Comté",
+		"code": "I",
+		"subdivision": "Metropolitan region",
+		"native": "Franche-Comté"
+	},
+	{
+        "country": "France",
+		"name": "Languedoc-Roussillon",
+		"code": "K",
+		"subdivision": "Metropolitan region",
+		"native": "Languedoc-Roussillon"
+	},
+	{
+        "country": "France",
+		"name": "Limousin",
+		"code": "L",
+		"subdivision": "Metropolitan region",
+		"native": "Limousin"
+	},
+	{
+        "country": "France",
+		"name": "Lorraine",
+		"code": "M",
+		"subdivision": "Metropolitan region",
+		"native": "Lorraine"
+	},
+	{
+        "country": "France",
+		"name": "Lower Normandy",
+		"code": "P",
+		"subdivision": "Metropolitan region",
+		"native": "Basse-Normandie"
+	},
+	{
+        "country": "France",
+		"name": "Midi-Pyrénées",
+		"code": "N",
+		"subdivision": "Metropolitan region",
+		"native": "Midi-Pyrénées"
+	},
+	{
+        "country": "France",
+		"name": "Nord-Pas-de-Calais",
+		"code": "O",
+		"subdivision": "Metropolitan region",
+		"native": "Nord-Pas-de-Calais"
+	},
+	{
+        "country": "France",
+		"name": "Pays de la Loire",
+		"code": "R",
+		"subdivision": "Metropolitan region",
+		"native": "Pays de la Loire"
+	},
+	{
+        "country": "France",
+		"name": "Picardy",
+		"code": "S",
+		"subdivision": "Metropolitan region",
+		"native": "Picardie"
+	},
+	{
+        "country": "France",
+		"name": "Poitou-Charentes",
+		"code": "T",
+		"subdivision": "Metropolitan region",
+		"native": "Poitou-Charentes"
+	},
+	{
+        "country": "France",
+		"name": "Provence-Alpes-Côte d'Azur",
+		"code": "U",
+		"subdivision": "Metropolitan region",
+		"native": "Provence-Alpes-Côte d'Azur"
+	},
+	{
+        "country": "France",
+		"name": "Rhône-Alpes",
+		"code": "V",
+		"subdivision": "Metropolitan region",
+		"native": "Rhône-Alpes"
+	},
+	{
+        "country": "France",
+		"name": "Upper Normandy",
+		"code": "Q",
+		"subdivision": "Metropolitan region",
+		"native": "Haute-Normandie"
+	},
+	{
+        "country": "France",
+		"name": "Île-de-France",
+		"code": "J",
+		"subdivision": "Metropolitan region",
+		"native": "Île-de-France"
+	},
+    {
+		"country": "Germany",
+        "name": "Baden-Württemberg",
+		"code": "BW"
+	},
+	{
+		"country": "Germany",
+        "name": "Bayern",
+		"code": "BY"
+	},
+	{
+		"country": "Germany",
+        "name": "Berlin",
+		"code": "BE"
+	},
+	{
+		"country": "Germany",
+        "name": "Brandenburg",
+		"code": "BB"
+	},
+	{
+		"country": "Germany",
+        "name": "Bremen",
+		"code": "HB"
+	},
+	{
+		"country": "Germany",
+        "name": "Hamburg",
+		"code": "HH"
+	},
+	{
+		"country": "Germany",
+        "name": "Hessen",
+		"code": "HE"
+	},
+	{
+		"country": "Germany",
+        "name": "Mecklenburg-Vorpommern",
+		"code": "MV"
+	},
+	{
+		"country": "Germany",
+        "name": "Niedersachsen",
+		"code": "NI"
+	},
+	{
+		"country": "Germany",
+        "name": "Nordrhein-Westfalen",
+		"code": "NW"
+	},
+	{
+		"country": "Germany",
+        "name": "Rheinland-Pfalz",
+		"code": "RP"
+	},
+	{
+		"country": "Germany",
+        "name": "Saarland",
+		"code": "SL"
+	},
+	{
+		"country": "Germany",
+        "name": "Sachsen",
+		"code": "SN"
+	},
+	{
+		"country": "Germany",
+        "name": "Sachsen-Anhalt",
+		"code": "ST"
+	},
+	{
+		"country": "Germany",
+        "name": "Schleswig-Holstein",
+		"code": "SH"
+	},
+	{
+		"country": "Germany",
+        "name": "Thüringen",
+		"code": "TH"
+	},
+    {
+		"country": "Mexico",
+        "name": "Distrito Federal",
+		"code": "DIF",
+		"subdivision": "federal district"
+	},
+	{
+		"country": "Mexico",
+        "name": "Aguascalientes",
+		"code": "AGU",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Baja California",
+		"code": "BCN",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Baja California Sur",
+		"code": "BCS",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Campeche",
+		"code": "CAM",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Chiapas",
+		"code": "CHP",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Chihuahua",
+		"code": "CHH",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Coahuila",
+		"code": "COA",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Colima",
+		"code": "COL",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Durango",
+		"code": "DUR",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Guanajuato",
+		"code": "GUA",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Guerrero",
+		"code": "GRO",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Hidalgo",
+		"code": "HID",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Jalisco",
+		"code": "JAL",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Michoacán",
+		"code": "MIC",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Morelos",
+		"code": "MOR",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "México",
+		"code": "MEX",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Nayarit",
+		"code": "NAY",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Nuevo León",
+		"code": "NLE",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Oaxaca",
+		"code": "OAX",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Puebla",
+		"code": "PUE",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Querétaro",
+		"code": "QUE",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Quintana Roo",
+		"code": "ROO",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "San Luis Potosí",
+		"code": "SLP",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Sinaloa",
+		"code": "SIN",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Sonora",
+		"code": "SON",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Tabasco",
+		"code": "TAB",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Tamaulipas",
+		"code": "TAM",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Tlaxcala",
+		"code": "TLA",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Veracruz",
+		"code": "VER",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Yucatán",
+		"code": "YUC",
+		"subdivision": "state"
+	},
+	{
+		"country": "Mexico",
+        "name": "Zacatecas",
+		"code": "ZAC",
+		"subdivision": "state"
+	},
+    {
+		"name": "District of Columbia",
+        "country": "United States",
+		"code": "DC",
+		"subdivision": "district"
+	},
+	{
+		"name": "American Samoa",
+        "country": "United States",
+		"code": "AS",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "Guam",
+        "country": "United States",
+		"code": "GU",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "Northern Mariana Islands",
+        "country": "United States",
+		"code": "MP",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "Puerto Rico",
+        "country": "United States",
+		"code": "PR",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "United States Minor Outlying Islands",
+        "country": "United States",
+		"code": "UM",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "Virgin Islands, U.S.",
+        "country": "United States",
+		"code": "VI",
+		"subdivision": "outlying territory"
+	},
+	{
+		"name": "Alabama",
+        "country": "United States",
+		"code": "AL",
+		"subdivision": "state"
+	},
+	{
+		"name": "Alaska",
+        "country": "United States",
+		"code": "AK",
+		"subdivision": "state"
+	},
+	{
+		"name": "Arizona",
+        "country": "United States",
+		"code": "AZ",
+		"subdivision": "state"
+	},
+	{
+		"name": "Arkansas",
+        "country": "United States",
+		"code": "AR",
+		"subdivision": "state"
+	},
+	{
+		"name": "California",
+        "country": "United States",
+		"code": "CA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Colorado",
+        "country": "United States",
+		"code": "CO",
+		"subdivision": "state"
+	},
+	{
+		"name": "Connecticut",
+        "country": "United States",
+		"code": "CT",
+		"subdivision": "state"
+	},
+	{
+		"name": "Delaware",
+        "country": "United States",
+		"code": "DE",
+		"subdivision": "state"
+	},
+	{
+		"name": "Florida",
+        "country": "United States",
+		"code": "FL",
+		"subdivision": "state"
+	},
+	{
+		"name": "Georgia",
+        "country": "United States",
+		"code": "GA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Hawaii",
+        "country": "United States",
+		"code": "HI",
+		"subdivision": "state"
+	},
+	{
+		"name": "Idaho",
+        "country": "United States",
+		"code": "ID",
+		"subdivision": "state"
+	},
+	{
+		"name": "Illinois",
+        "country": "United States",
+		"code": "IL",
+		"subdivision": "state"
+	},
+	{
+		"name": "Indiana",
+        "country": "United States",
+		"code": "IN",
+		"subdivision": "state"
+	},
+	{
+		"name": "Iowa",
+        "country": "United States",
+		"code": "IA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Kansas",
+        "country": "United States",
+		"code": "KS",
+		"subdivision": "state"
+	},
+	{
+		"name": "Kentucky",
+        "country": "United States",
+		"code": "KY",
+		"subdivision": "state"
+	},
+	{
+		"name": "Louisiana",
+        "country": "United States",
+		"code": "LA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Maine",
+        "country": "United States",
+		"code": "ME",
+		"subdivision": "state"
+	},
+	{
+		"name": "Maryland",
+        "country": "United States",
+		"code": "MD",
+		"subdivision": "state"
+	},
+	{
+		"name": "Massachusetts",
+        "country": "United States",
+		"code": "MA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Michigan",
+        "country": "United States",
+		"code": "MI",
+		"subdivision": "state"
+	},
+	{
+		"name": "Minnesota",
+        "country": "United States",
+		"code": "MN",
+		"subdivision": "state"
+	},
+	{
+		"name": "Mississippi",
+        "country": "United States",
+		"code": "MS",
+		"subdivision": "state"
+	},
+	{
+		"name": "Missouri",
+        "country": "United States",
+		"code": "MO",
+		"subdivision": "state"
+	},
+	{
+		"name": "Montana",
+        "country": "United States",
+		"code": "MT",
+		"subdivision": "state"
+	},
+	{
+		"name": "Nebraska",
+        "country": "United States",
+		"code": "NE",
+		"subdivision": "state"
+	},
+	{
+		"name": "Nevada",
+        "country": "United States",
+		"code": "NV",
+		"subdivision": "state"
+	},
+	{
+		"name": "New Hampshire",
+        "country": "United States",
+		"code": "NH",
+		"subdivision": "state"
+	},
+	{
+		"name": "New Jersey",
+        "country": "United States",
+		"code": "NJ",
+		"subdivision": "state"
+	},
+	{
+		"name": "New Mexico",
+        "country": "United States",
+		"code": "NM",
+		"subdivision": "state"
+	},
+	{
+		"name": "New York",
+        "country": "United States",
+		"code": "NY",
+		"subdivision": "state"
+	},
+	{
+		"name": "North Carolina",
+        "country": "United States",
+		"code": "NC",
+		"subdivision": "state"
+	},
+	{
+		"name": "North Dakota",
+        "country": "United States",
+		"code": "ND",
+		"subdivision": "state"
+	},
+	{
+		"name": "Ohio",
+        "country": "United States",
+		"code": "OH",
+		"subdivision": "state"
+	},
+	{
+		"name": "Oklahoma",
+        "country": "United States",
+		"code": "OK",
+		"subdivision": "state"
+	},
+	{
+		"name": "Oregon",
+        "country": "United States",
+		"code": "OR",
+		"subdivision": "state"
+	},
+	{
+		"name": "Pennsylvania",
+        "country": "United States",
+		"code": "PA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Rhode Island",
+        "country": "United States",
+		"code": "RI",
+		"subdivision": "state"
+	},
+	{
+		"name": "South Carolina",
+        "country": "United States",
+		"code": "SC",
+		"subdivision": "state"
+	},
+	{
+		"name": "South Dakota",
+        "country": "United States",
+		"code": "SD",
+		"subdivision": "state"
+	},
+	{
+		"name": "Tennessee",
+        "country": "United States",
+		"code": "TN",
+		"subdivision": "state"
+	},
+	{
+		"name": "Texas",
+        "country": "United States",
+		"code": "TX",
+		"subdivision": "state"
+	},
+	{
+		"name": "Utah",
+        "country": "United States",
+		"code": "UT",
+		"subdivision": "state"
+	},
+	{
+		"name": "Vermont",
+        "country": "United States",
+		"code": "VT",
+		"subdivision": "state"
+	},
+	{
+		"name": "Virginia",
+        "country": "United States",
+		"code": "VA",
+		"subdivision": "state"
+	},
+	{
+		"name": "Washington",
+        "country": "United States",
+		"code": "WA",
+		"subdivision": "state"
+	},
+	{
+		"name": "West Virginia",
+        "country": "United States",
+		"code": "WV",
+		"subdivision": "state"
+	},
+	{
+		"name": "Wisconsin",
+        "country": "United States",
+		"code": "WI",
+		"subdivision": "state"
+	},
+	{
+		"name": "Wyoming",
+        "country": "United States",
+		"code": "WY",
+		"subdivision": "state"
+	}
+]

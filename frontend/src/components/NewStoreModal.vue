@@ -2,8 +2,7 @@
 import { createStore } from '@/api/storeApi.js'
 import { ref } from 'vue'
 import countryList from '@/api/countries.json';
-
-const countries = countryList.map((x) => x.name);
+import provinceList from '@/api/provinces.json';
 
 const data = ref({
     modal: false,
@@ -11,7 +10,9 @@ const data = ref({
     state: null,
     phone: null,
     country: '',
+    countries: countryList.map((x) => x.name),
     province: '',
+    provinces: [],
     city: '',
     address: '',
     shop_email: '',
@@ -26,7 +27,14 @@ const data = ref({
             return pattern.test(value) || 'Invalid e-mail.'
         },
     }
-})
+});
+
+const handleProvice = () => {
+    data.value.province = ''
+    data.value.provinces = provinceList.filter(x => x.country === data.value.country).map(x => x.name);
+}
+
+// const test = () => {console.log(data.value.country)};
 </script>
 
 <template>
@@ -54,21 +62,16 @@ const data = ref({
                                     :items="['Active', 'Inactive']" label="Store State*" required></v-select>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field :rules="[data.rules.required]" min="999999" prefix="+" type="number" label="Phone*"
-                                    required v-model="data.phone"></v-text-field>
+                                <v-text-field :rules="[data.rules.required]" min="999999" prefix="+" type="number"
+                                    label="Phone*" required v-model="data.phone"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-
-                                <v-select v-model="data.country" :rules="[data.rules.required]"
-                                    :items="countries" label="Country*" required></v-select>
-
-                                <!-- <v-text-field :rules="[data.rules.required]" label="Country*" v-model="data.country"
-                                    required>
-                                </v-text-field> -->
+                                <v-select v-model="data.country" :rules="[data.rules.required]" :items="data.countries"
+                                    label="Country*" required @update:modelValue="handleProvice"></v-select>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field :rules="[data.rules.required]" v-model="data.province" label="Province*"
-                                    hint="" required></v-text-field>
+                                <v-select v-model="data.province" :rules="[data.rules.required]" :items="data.provinces"
+                                    label="Provinces*" required @update:modelValue=""></v-select>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
                                 <v-text-field :rules="[data.rules.required]" label="City*" v-model="data.city" hint=""
