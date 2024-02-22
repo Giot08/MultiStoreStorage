@@ -1,6 +1,7 @@
 <script setup>
 import MainNav from '@/components/MainNav.vue';
 import NewStoreModal from '@/components/NewStoreModal.vue';
+import ImportStoresModal from '@/components/ImportStoresModal.vue';
 import { useStoreStorage } from '../stores/storeStore.js'
 
 const tableHeaders = ["Name", "Location", "Address", "Store email", "Phone"];
@@ -64,5 +65,6 @@ useStore.getStores();
       </tbody>
     </v-table>
     <NewStoreModal/>
+    <ImportStoresModal/>
   </v-container>
 </template>
