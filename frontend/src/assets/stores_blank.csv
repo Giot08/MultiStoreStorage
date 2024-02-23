@@ -1,0 +1,3 @@
+state,name,country,province,city,address,domain,phone,store_email,manager_email,latitude,longitude,zip_code
+Active,Giot Iquique,Chile,Tarapacá,Iquique,11232124,https://iquique.giot.cl,56974762834,iquique@giot.cl,iquique@giot.cl,22.3212,-23.23,1100000
+Active,Giot Iquique,Chile,Tarapacá,Iquique,22332,https://iquique.giot.cl,56974762834,iquique@giot.cl,iquique@giot.cl,22.3212,-23.23,1100000

@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import { createStore } from '@/api/storeApi.js'
+import { importStores } from '../api/storeApi.js';
 
 const data = ref({
     modal: false,
+    import_file: undefined
 });
 </script>
 
@@ -17,18 +18,18 @@ const data = ref({
             </template>
             <v-card>
                 <v-card-title class="text-center mt-3">
-                    <span class="text-h5">New Store</span>
+                    <span class="text-h5">Import Stores</span>
                 </v-card-title>
                 <v-card-text>
                     <v-container class="d-flex align-center ">
                         <box-icon size="md" type='solid' name='file' class="mx-1"></box-icon>
                         <v-file-input
+                            v-model="data.import_file"
                             class="mx-1"
                             :rules="rules"
                             accept=".csv"
                             prepend-icon=""
                             label="CSV"
-
                         ></v-file-input>
                     </v-container>
                 </v-card-text>
@@ -37,7 +38,7 @@ const data = ref({
                     <v-btn color="blue-darken-1" variant="text" @click="data.modal = false">
                         Close
                     </v-btn>
-                    <v-btn color="blue-darken-1" variant="text" click="">
+                    <v-btn color="blue-darken-1" variant="text" @click="importStores(data)">
                         Send
                     </v-btn>
                 </v-card-actions>

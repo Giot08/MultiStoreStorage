@@ -23,19 +23,7 @@ useStore.getStores();
       </thead>
       <tbody v-if="useStore.isLoadingStores" >
         <tr>
-          <td>
-            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
-          </td>
-          <td>
-            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
-          </td>
-          <td>
-            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
-          </td>
-          <td>
-            <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
-          </td>
-          <td>
+          <td colspan="4">
             <v-skeleton-loader color="primary" type="paragraph" ></v-skeleton-loader>
           </td>
         </tr>
